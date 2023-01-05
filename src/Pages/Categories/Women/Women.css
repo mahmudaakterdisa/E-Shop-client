@@ -1,0 +1,12 @@
+.women-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.womenBanner {
+    width: 100%;
+    height: 60vh;
+    background-image: url('https://img.freepik.com/free-photo/three-young-beautiful-smiling-girls-trendy-summer-casual-jeans-clothes-sexy-carefree-women-posing-positive-models-sunglasses_158538-4730.jpg?w=826&t=st=1672878330~exp=1672878930~hmac=62e7dd43c617b8be3c341d7570c434d9ff9c63a91adf3e427237f7ca9bc0fe0f');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

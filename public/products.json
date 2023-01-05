@@ -1,0 +1,77 @@
+[
+    {
+        "categories_name": "Women",
+        "categories_product": [
+            {
+                "product_name": "Brown Jacket",
+                "product_image": "https://img.freepik.com/free-photo/funny-shot-young-lovely-brown-haired-lady-with-bun-hairstyle-showing-cheerfully-tongue-front-while-taking-her-hood-isolated-beige-wall_295783-10747.jpg?t=st=1672873963~exp=1672874563~hmac=44fcf4f368dbbfe4875c8bf2d8a9cc268922e72e1eb74d1a657b8e9f33079540",
+                "product_price": 200
+            },
+            {
+                "product_name": "Short Pant",
+                "product_image": "https://img.freepik.com/free-photo/portrait-young-woman-wearing-straw-hat-posing-colorful-yellow-wall_231208-9770.jpg?w=996&t=st=1672875254~exp=1672875854~hmac=eb8cf05546053d91124832ae37bf1969157e5daed08e8bb71bc092c901f2435c",
+                "product_price": 300
+            },
+            {
+                "product_name": "Pink Long Shirt",
+                "product_image": "https://img.freepik.com/free-photo/fashionable-blond-woman-stylish-summer-clothes-posing-pink-wall_273443-4505.jpg?w=996&t=st=1672875415~exp=1672876015~hmac=1103cc67e1800c55acfab5c8cca1ecf3ad1894868474c42646b828fbd30a2684",
+                "product_price": 350
+            },
+            {
+                "product_name": "Long Mantel",
+                "product_image": "https://img.freepik.com/free-photo/fashion-girls-city_1157-4952.jpg?w=996&t=st=1672875504~exp=1672876104~hmac=d74af2ac873f12ba333aeae9917cc03c1a3ec21c3fee61c3d170c666c30fb6e9",
+                "product_price": 450
+            }
+        ]
+    },
+    {
+        "categories_name": "Men",
+        "categories_product": [
+            {
+                "product_name": "Jeans Shirt",
+                "product_image": "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man_158538-5030.jpg?w=826&t=st=1672875966~exp=1672876566~hmac=ecdc7f1c8d9198c5d8f0c7d46fd08b36dd51d93653a1d36db37f2b74d884b6cf",
+                "product_price": 130
+            },
+            {
+                "product_name": "Red Shirt",
+                "product_image": "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4909.jpg?w=826&t=st=1672876063~exp=1672876663~hmac=0fbce8f0954c4e120b05af512109f30605dac35d8be30fd4ff0c023ec7831042",
+                "product_price": 250
+            },
+            {
+                "product_name": "Long T-shirt",
+                "product_image": "https://img.freepik.com/free-photo/portrait-handsome-smiling-young-man-model-wearing-casual-summer-pink-clothes-fashion-stylish-man-posing_158538-5355.jpg?w=826&t=st=1672876112~exp=1672876712~hmac=9bb95c986d350a21698abe866f50b3ac900d475359d820ff00cd0f9b8d9b55a2",
+                "product_price": 200
+            },
+            {
+                "product_name": "Men Jacket",
+                "product_image": "https://img.freepik.com/free-photo/handsome-confident-hipster-modelsexy-unshaven-man-dressed-summer-stylish-green-hoodie-jeans-clothes-fashion-male-with-curly-hairstyle-posing-studio-isolated-blue_158538-26584.jpg?w=996&t=st=1672876171~exp=1672876771~hmac=51857a162cdaec4dd369440acb2d93657e92d61303913f1d317155382165f543",
+                "product_price": 300
+            }
+        ]
+    },
+    {
+        "categories_name": "Kids",
+        "categories_product": [
+            {
+                "product_name": "T-shirt",
+                "product_image": "https://img.freepik.com/premium-psd/top-view-baby-fashion-mockup-clothing_23-2149399393.jpg?w=996",
+                "product_price": 230
+            },
+            {
+                "product_name": " Rib Lap Shoulder",
+                "product_image": "https://img.freepik.com/free-psd/baby-rib-lap-shoulder-creeper-mockup-02_126278-2.jpg?w=740&t=st=1672876304~exp=1672876904~hmac=7765b175bfb8403887093c9d4b8be77119dc60e35d98bcb2ad947fa691507d17",
+                "product_price": 130
+            },
+            {
+                "product_name": "Red Winter Cap",
+                "product_image": "https://img.freepik.com/free-photo/smiling-cute-winter-girl-red-hat-sitting-car-having-fun-medium-shot-happy-beautiful-female-baby-warm-clothing-having-positive-emotion-outdoor-surrounded-by-snowflakes-enjoying-childhood_132075-11092.jpg?w=996&t=st=1672876436~exp=1672877036~hmac=39035089bd13946bc199d8adc4e17cff6e05e300922858b83770f99ce4761b29",
+                "product_price": 30
+            },
+            {
+                "product_name": "Baby Combo",
+                "product_image": "https://img.freepik.com/free-photo/baby-stuff-wooden-table_93675-130480.jpg?w=996&t=st=1672876506~exp=1672877106~hmac=5aee3d640cdafe99c65433bc3665969e483047cc4ebf38f16c301fdebe5fffa0",
+                "product_price": 230
+            }
+        ]
+    }
+]

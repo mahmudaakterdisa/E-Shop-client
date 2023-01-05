@@ -1,0 +1,7 @@
+.banner-container {
+    width: 100%;
+    min-height: 80vh;
+    background-image: url('https://img.freepik.com/free-photo/medium-shot-woman-local-retail_23-2149313476.jpg?w=996&t=st=1672870040~exp=1672870640~hmac=907c6d10214b46dd7d554ab477de86c099bfe538ad06a0a26c8ddd6c1195b421');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
