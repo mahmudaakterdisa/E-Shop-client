@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import css from './Women.css'
 
 const Women = () => {
+
     return (
         <div className='women-container'>
             <div className='womenBanner flex justify-center items-center'>
@@ -11,7 +12,11 @@ const Women = () => {
                 </div>
             </div>
             <div>
-                women
+                {/* {
+                    womenCollection.map(women => {
+                        console.log(women.categories_name)
+                    })
+                } */}
             </div>
 
         </div>

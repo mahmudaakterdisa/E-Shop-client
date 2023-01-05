@@ -1,10 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Authcontext } from '../Authprovider/Authprovider';
 import { GiShoppingCart } from "react-icons/gi";
+import Categoriesli from './Categoriesli';
 
 const Navbar = () => {
     const { user, logout } = useContext(Authcontext);
+
+    const [womenCollection, setWomenCollection] = useState([]);
+
+    useEffect(() => {
+
+        fetch('http://localhost:5000/Categories')
+            .then(res => res.json())
+            .then(data => setWomenCollection(data))
+    }, [])
 
 
     const handlelogout = () => {
@@ -27,9 +37,10 @@ const Navbar = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </a>
                             <ul className="p-2 bg-white">
-                                <li><Link to='/women'>Women</Link></li>
-                                <li><Link to='/men'>Men</Link></li>
-                                <li><Link to='/kids'>Kids</Link></li>
+
+                                {
+                                    womenCollection.map(categoriesname => <Categoriesli key={categoriesname._id} categoriesname={categoriesname}></Categoriesli>)
+                                }
                             </ul>
                         </li>
                         <li>
@@ -76,9 +87,9 @@ const Navbar = () => {
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
                         <ul className="p-2 bg-white">
-                            <li><Link to='/women'>Women</Link></li>
-                            <li><Link to='/men'>Men</Link></li>
-                            <li><Link to='/kids'>Kids</Link></li>
+                            {
+                                womenCollection.map(categoriesname => <Categoriesli key={categoriesname._id} categoriesname={categoriesname}></Categoriesli>)
+                            }
                         </ul>
                     </li>
                     <li>

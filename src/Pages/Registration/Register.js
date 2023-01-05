@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Authcontext } from '../Authprovider/Authprovider';
 
 const Register = () => {
-    const { createUser } = useContext(Authcontext);
+    const { createUser, updateUser } = useContext(Authcontext);
     const navigate = useNavigate();
     const location = useLocation();
     // useTitle('Register')
@@ -24,10 +24,37 @@ const Register = () => {
                 form.reset();
                 navigate('/');
 
+                const userInfo = {
+                    displayName: username
+                }
+
+                updateUser(userInfo)
+                    .then(() => {
+                        saveUser(username, email);
+                    })
+                    .catch(err => console.log(err));
+
+
             })
 
             .catch(error => console.error(error))
 
+    }
+
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                navigate('/');
+            })
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -44,12 +71,6 @@ const Register = () => {
                             </label>
                             <input type="text" placeholder="Name" name='username' className="input input-bordered" />
                         </div>
-                        {/* <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Photo URL</span>
-                            </label>
-                            <input type="text" placeholder="Photo URL" name='photo' className="input input-bordered" />
-                        </div> */}
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>

@@ -54,23 +54,13 @@ const Authprovider = ({ children }) => {
 
 
     // for update username
-    const updateUserName = (username) => {
-        console.log(username);
-        updateProfile(auth.currentusers, {
-            displayName: username
-        })
-
-            .then(() => {
-                console.log('display name updated')
-            })
-
-            .catch(error => console.error(error))
-
+    const updateUser = (userInfo) => {
+        return updateProfile(auth.currentUser, userInfo);
     }
 
 
 
-    const authInfo = { user, loading, providerLogin, logout, createUser, signIn, updateUserName };
+    const authInfo = { user, loading, providerLogin, logout, createUser, signIn, updateUser };
     return (
         <div>
             <Authcontext.Provider value={authInfo}>

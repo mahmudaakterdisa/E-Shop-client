@@ -3,11 +3,10 @@ import { createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Cart from '../Pages/Cart/Cart';
 import Home from '../Pages/Home/Home';
-import Kids from '../Pages/Categories/Kids/Kids';
 import Login from '../Pages/Login/Login';
-import Men from '../Pages/Categories/Men/Men';
 import Register from '../Pages/Registration/Register';
-import Women from '../Pages/Categories/Women/Women';
+import Allcategories from '../Pages/Categories/Allcategories/Allcategories';
+import Privateroute from '../Pages/Privateroute/Privateroute';
 
 
 export const router = createBrowserRouter([
@@ -31,20 +30,23 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/cart',
-                element: <Cart></Cart>
+                element: <Privateroute><Cart></Cart></Privateroute>
             },
+
+
             {
-                path: '/women',
-                element: <Women></Women>
+                path: '/allcatagories/:name',
+                loader: ({ params }) => fetch(`http://localhost:5000/Categories/${params.name}`),
+                element: <Allcategories></Allcategories>
             },
+
             {
-                path: '/men',
-                element: <Men></Men>
-            },
-            {
-                path: '/kids',
-                element: <Kids></Kids>
-            },
+                path: '*',
+                element: <div className="my-60 mx-96">
+                    <img src="https://www.crazydomains.co.nz/help/404-not-found-error-explained/?image_id=2979" alt="" />
+
+                </div>
+            }
         ]
 
     }

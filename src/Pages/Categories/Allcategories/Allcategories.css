@@ -1,0 +1,12 @@
+.categories-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.categories-Banner {
+    width: 100%;
+    height: 80vh;
+    background-image: url('https://img.freepik.com/free-photo/dancing-team-studio_1303-10941.jpg?w=1380&t=st=1672931410~exp=1672932010~hmac=e947ae95978a891c9c8deaaa90131699e67ef199c0d8835a6f1670b3564a346a');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,14 @@
+.cart-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.order-container {
+    width: 40%;
+    height: 100%;
+}
+
+.payment-container {
+    width: 20%;
+    height: 50vh;
+}
