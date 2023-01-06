@@ -5,7 +5,6 @@ import css from './AvailableProducts.css'
 
 const AvailableProducts = ({ allcollection }) => {
     const { user } = useContext(Authcontext)
-    console.log(user.email)
 
     const { product_name, product_image, product_price } = allcollection;
 
@@ -18,7 +17,7 @@ const AvailableProducts = ({ allcollection }) => {
 
         }
 
-        fetch('http://localhost:5000/ShoppingCart', {
+        fetch('https://e-shop-server-plum.vercel.app/ShoppingCart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,7 +28,6 @@ const AvailableProducts = ({ allcollection }) => {
             .then(data => {
                 console.log(data);
                 if (data.acknowledged) {
-                    // toast('Hello World');
                     alert('Added')
 
 

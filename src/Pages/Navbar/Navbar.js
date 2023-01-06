@@ -8,13 +8,28 @@ const Navbar = () => {
     const { user, logout } = useContext(Authcontext);
 
     const [womenCollection, setWomenCollection] = useState([]);
-
+    const [notification, setNotification] = useState(0)
     useEffect(() => {
 
-        fetch('http://localhost:5000/Categories')
+        fetch(' https://e-shop-server-plum.vercel.app/Categories')
             .then(res => res.json())
             .then(data => setWomenCollection(data))
     }, [])
+
+    //load data from shopping cart for notification
+
+    useEffect(() => {
+
+        fetch(` https://e-shop-server-plum.vercel.app/ShoppingCart?email=${user?.email}`, {
+
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+
+        })
+            .then(res => res.json())
+            .then(data => setNotification(data))
+    }, [user?.email])
 
 
     const handlelogout = () => {
@@ -36,7 +51,7 @@ const Navbar = () => {
                                 Categories
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </a>
-                            <ul className="p-2 bg-white">
+                            <ul className="p-2 bg-white w-full">
 
                                 {
                                     womenCollection.map(categoriesname => <Categoriesli key={categoriesname._id} categoriesname={categoriesname}></Categoriesli>)
@@ -62,14 +77,23 @@ const Navbar = () => {
                                             <li>Register</li>
                                         </Link>
                                         <Link to='/login'>
-                                            <li>LogIn</li>
+                                            <li>Login</li>
                                         </Link>
                                     </>
                             }
                         </li>
                         <li>
+                            <Link to='/users'>
+                                Users
+                            </Link>
+                        </li>
+                        <li>
                             <Link to='/cart'>
-                                <GiShoppingCart size={40} color='#FF7052'></GiShoppingCart>
+                                <div className="indicator">
+                                    <span className="indicator-item badge badge-secondary">{notification.length}</span>
+                                    <GiShoppingCart size={40} color='#FF7052'></GiShoppingCart>
+                                </div>
+
                             </Link>
                         </li>
                     </ul>
@@ -86,7 +110,7 @@ const Navbar = () => {
                             Categories
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
-                        <ul className="p-2 bg-white">
+                        <ul className="p-2 bg-white w-full">
                             {
                                 womenCollection.map(categoriesname => <Categoriesli key={categoriesname._id} categoriesname={categoriesname}></Categoriesli>)
                             }
@@ -111,14 +135,23 @@ const Navbar = () => {
                                         <li>Register</li>
                                     </Link>
                                     <Link to='/login'>
-                                        <li>LogIn</li>
+                                        <li>Login</li>
                                     </Link>
                                 </>
                         }
                     </li>
                     <li>
+                        <Link to='/users'>
+                            Users
+                        </Link>
+                    </li>
+                    <li>
                         <Link to='/cart'>
-                            <GiShoppingCart size={40} color='#FF7052'></GiShoppingCart>
+                            <div className="indicator">
+                                <span className="indicator-item badge badge-secondary">{notification.length}</span>
+                                <GiShoppingCart size={40} color='#FF7052'></GiShoppingCart>
+                            </div>
+
                         </Link>
                     </li>
 

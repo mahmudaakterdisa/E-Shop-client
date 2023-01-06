@@ -7,6 +7,7 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Registration/Register';
 import Allcategories from '../Pages/Categories/Allcategories/Allcategories';
 import Privateroute from '../Pages/Privateroute/Privateroute';
+import RegisterUsers from '../Pages/RegistserUsers/RegisterUsers';
 
 
 export const router = createBrowserRouter([
@@ -36,8 +37,13 @@ export const router = createBrowserRouter([
 
             {
                 path: '/allcatagories/:name',
-                loader: ({ params }) => fetch(`http://localhost:5000/Categories/${params.name}`),
-                element: <Allcategories></Allcategories>
+                loader: ({ params }) => fetch(` https://e-shop-server-plum.vercel.app/Categories/${params.name}`),
+                element: <Privateroute><Allcategories></Allcategories></Privateroute>
+            },
+
+            {
+                path: '/users',
+                element: <Privateroute><RegisterUsers></RegisterUsers></Privateroute>
             },
 
             {
